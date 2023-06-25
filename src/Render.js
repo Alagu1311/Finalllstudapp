@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import Base from './Base'
 
 
@@ -16,7 +16,7 @@ function Render({ stud, setstud,studentId,setstudid }) {
               >
               </Base>
                 </>
-               
+             
               <div className='flex'>
               {stud.map((arr) => (
                 
@@ -28,23 +28,30 @@ function Render({ stud, setstud,studentId,setstudid }) {
                   <h3>Department:{arr.Dep}</h3>
                   <h3>Semester:{arr.Sem}</h3>
                       <h3>CGPA:{arr.Cgpa}</h3>
+
                    
                   <div className='btn'>  
                       <button onClick={()=>setstudid(arr.id)}>Edit</button>
                       <button onClick={()=>delfunc(arr.id)}>Delete</button>
-                          </div>
                       </div>
+ 
+
+                  </div>
+                      
                      
                   
                    
               
               
               ))}
-                  </div>
+          </div>
+          
                    
         
     </div>
   )
 }
 
-export default Render
+export default Render;
+
+

@@ -27,6 +27,7 @@ function App() {
         <Route path='/Editstud' element={<Editstud
           stud={stud}
           setstud={setstud}
+          studid={studid}
         />} />
       </Routes>
       

@@ -24,4 +24,4 @@ function Base({ title, description }) {
   )
 }
 
-export default Base
+export default Base;

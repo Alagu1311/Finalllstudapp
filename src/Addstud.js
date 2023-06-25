@@ -34,6 +34,7 @@ function Addstud({ stud, setstud }) {
                     description={"Add student from any Deaprtment with Good CGPA"}
                 >
                 </Base>
+                 </>
            
         
       
@@ -48,7 +49,7 @@ function Addstud({ stud, setstud }) {
               </div>
           </form>
           
-        </>
+       
             </div>
             
   )

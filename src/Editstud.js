@@ -21,7 +21,18 @@ function Editstud({stud,setstud,studId,setstudid}) {
     }
     
   },[studId,stud])
-
+  const editstudent = () => {
+    const finalres=stud.findIndex((student)=>student.id!==studId)
+    const obj = {
+      id,
+      Name,
+      Dep,
+      sem,
+      Cgpa
+    }
+    stud[finalres] = obj;
+    setstud([...stud,obj])
+}
   return (
 
     <div>
@@ -39,7 +50,7 @@ function Editstud({stud,setstud,studId,setstudid}) {
               <input type='text' placeholder='Enter Semester'  className='inmar' value={sem} onChange={(e)=>setSem(e.target.value)}></input>Enter Semester<br></br>
               <input type='text' placeholder='Enter CGPA'  className='inmar'value={Cgpa} onChange={(e)=>setCgpa(e.target.value)}></input>Enter CGPA<br></br>
               <div>
-                  <button className='addbtn'onClick={""}>Editstudent</button>
+                  <button className='addbtn'onClick={editstudent}>Editstudent</button>
               </div>
       </form>
      
