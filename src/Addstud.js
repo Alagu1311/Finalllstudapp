@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Base from './Base';
+import { studcontxt } from './App';
+import Render from './Render';
 
-function Addstud({ stud, setstud }) {
+function Addstud() {
+    const {stud,setstud}=useContext(studcontxt)
     const [id, setid] = useState("");
     const [Name, setName] = useState("");
     const [Dep, setDep] = useState("");
@@ -26,18 +29,12 @@ function Addstud({ stud, setstud }) {
     }
    
     return (
-
         <div>
-            <>
-                <Base
-                    title={"Add student from Rank Holders Student Info"}
-                    description={"Add student from any Deaprtment with Good CGPA"}
-                >
-                </Base>
-                 </>
-           
-        
+              <Render/>
+
       
+        
+      <h3 className='texalcen'>Add-student</h3>
           <form className='inputgrp'>
               <input type='text' placeholder='Enter ID' className='inmar' value={id} onChange={(e)=>setid(e.target.value)}></input>Id<br></br>
               <input type='text' placeholder='Enter Name' className='inmar' value={Name} onChange={(e)=>setName(e.target.value)}></input>Name<br></br>
@@ -47,12 +44,13 @@ function Addstud({ stud, setstud }) {
               <div>
                   <button className='addbtn'onClick={addstud}>Addstudent</button>
               </div>
-          </form>
+            </form>
           
+          </div>
        
-            </div>
+            
             
   )
 }
 
-export default Addstud
+export default Addstud;

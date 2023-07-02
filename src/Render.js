@@ -1,8 +1,11 @@
 
+import { useContext } from 'react';
 import Base from './Base'
+import { Paper } from '@mui/material';
+import { studcontxt } from './App';
 
-
-function Render({ stud, setstud,studentId,setstudid }) {
+function Render() {
+    const {stud,setstud,studentId,setstudid}=useContext(studcontxt)
     const delfunc = (studentId) => {
         const res = stud.filter((Student) => Student.id !== studentId)
         setstud(res)
@@ -21,8 +24,9 @@ function Render({ stud, setstud,studentId,setstudid }) {
               {stud.map((arr) => (
                 
              
-             
+           
                   <div className='bor' key={arr.id}>
+                        <Paper className='papbor' elevation={3}>
                  
                   <h3>Name:{arr.Name}</h3>
                   <h3>Department:{arr.Dep}</h3>
@@ -33,7 +37,8 @@ function Render({ stud, setstud,studentId,setstudid }) {
                   <div className='btn'>  
                       <button onClick={()=>setstudid(arr.id)}>Edit</button>
                       <button onClick={()=>delfunc(arr.id)}>Delete</button>
-                      </div>
+                          </div>
+                          </Paper>
  
 
                   </div>
@@ -45,6 +50,8 @@ function Render({ stud, setstud,studentId,setstudid }) {
               
               ))}
           </div>
+          
+              
           
                    
         

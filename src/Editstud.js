@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Render from './Render';
+import { studcontxt } from './App';
 
 
 
-function Editstud({stud,setstud,studId,setstudid}) {
+function Editstud() {
+  const {stud,setstud,studId}=useContext(studcontxt)
    const [id, setid] = useState("");
     const [Name, setName] = useState("");
     const [Dep, setDep] = useState("");
