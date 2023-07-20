@@ -5,7 +5,7 @@ import { Paper } from '@mui/material';
 import { studcontxt } from './App';
 
 function Render() {
-    const {stud,setstud,studentId,setstudid}=useContext(studcontxt)
+    const {stud,setstud,setstudid}=useContext(studcontxt)
     const delfunc = (studentId) => {
         const res = stud.filter((Student) => Student.id !== studentId)
         setstud(res)
