@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 
 
 
-function Base({ title, description }) {
+function Base() {
     const navigate=useNavigate("")
    
   return (
@@ -15,10 +15,7 @@ function Base({ title, description }) {
         <Button variant="contained" className='btnal' onClick={()=>navigate("/Editstud")}>Editstudent</Button>
         </div>
          
-          <h3 className='titcen'>{title}</h3>
-          <p className='titcen'>
-              {description}
-          </p>
+          
       
       </div>
   )

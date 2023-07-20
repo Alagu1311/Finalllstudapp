@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
-import Base from './Base';
 import { studcontxt } from './App';
 import Render from './Render';
+
 
 function Addstud() {
     const {stud,setstud}=useContext(studcontxt)
@@ -10,13 +10,13 @@ function Addstud() {
     const [Dep, setDep] = useState("");
     const [sem, setSem] = useState("");
     const [Cgpa, setCgpa] = useState("");
-    const addstud = () => {
+    const Handleaddstud  = () => {
         const obj = {
-            id:id,
-           Name: Name,
-           Dep: Dep,
-          sem:sem,
-          Cgpa:Cgpa
+            id,
+            Name,
+            Dep,
+            sem,
+            Cgpa
            
         }
         setstud([...stud,obj])
@@ -30,7 +30,7 @@ function Addstud() {
    
     return (
         <div>
-              <Render/>
+          
 
       
         
@@ -42,9 +42,11 @@ function Addstud() {
               <input type='text' placeholder='Enter Semester'  className='inmar' value={sem} onChange={(e)=>setSem(e.target.value)}></input>Enter Semester<br></br>
               <input type='text' placeholder='Enter CGPA'  className='inmar'value={Cgpa} onChange={(e)=>setCgpa(e.target.value)}></input>Enter CGPA<br></br>
               <div>
-                  <button className='addbtn'onClick={addstud}>Addstudent</button>
-              </div>
+                  <button className='addbtn'onClick={Handleaddstud}>Addstudent</button>
+                </div>
+                
             </form>
+            <Render/>
           
           </div>
        

@@ -12,13 +12,7 @@ function Render() {
     }
   return (
       <div>
-          <>
-              <Base
-                  title={"Rank Holders student Info"}
-                  description={"Over All Rank Holders from All The Department"}
-              >
-              </Base>
-                </>
+       
              
               <div className='flex'>
               {stud.map((arr) => (

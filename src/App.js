@@ -7,6 +7,7 @@ import Dashboard from './Dashboard';
 import Render from './Render';
 import Addstud from './Addstud';
 import Editstud from './Editstud';
+import Base from './Base';
 
 
 export const studcontxt=createContext(null)
@@ -16,6 +17,7 @@ function App() {
   
   return (
     <div className="App">
+      <Base/>
       <studcontxt.Provider
         value={{stud,setstud,studid,setstudid}}
       >

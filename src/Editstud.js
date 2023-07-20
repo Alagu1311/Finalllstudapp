@@ -38,10 +38,9 @@ function Editstud() {
   return (
 
     <div>
-       <Render
-        stud={stud}
-        setstud={setstud}
-      />
+
+      <h3 className='texalcen'>Edit student</h3>
+       <Render/>
       
 
           
