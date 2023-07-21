@@ -22,10 +22,11 @@ function App() {
         value={{stud,setstud,studid,setstudid}}
       >
       <Routes>
-         <Route exact path='/' element={<Content />} />
+         <Route exact path='/' element={<Base/>} />
          <Route path='/Render' element={<Render />} />
         <Route path='/Addstud' element={<Addstud />} />
-        <Route path='/Editstud' element={<Editstud/>} />
+          <Route path='/Editstud' element={<Editstud />} />
+          <Route path='/content' element={<Content/>}/>
         </Routes>
         </studcontxt.Provider>
       

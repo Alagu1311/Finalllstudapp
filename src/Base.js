@@ -10,7 +10,9 @@ function Base() {
   return (
     <div>
       
+      
       <div className='btngrp'>
+        <Button variant='contained' className='btnal' onClick={()=>navigate("/content")}>Dashboard</Button>
           <Button variant="contained"className='btnal' onClick={()=>navigate("/Render")}>Student</Button>
           <Button variant="contained"className='btnal' onClick={()=>navigate("/Addstud")}>Addstudent</Button>
         <Button variant="contained" className='btnal' onClick={()=>navigate("/Editstud")}>Editstudent</Button>
