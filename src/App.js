@@ -17,13 +17,13 @@ function App() {
   
   return (
     <div className="App">
-     <Base/>
+    <Base/>
       <studcontxt.Provider
         value={{stud,setstud,studid,setstudid}}
       >
       <Routes>
-         <Route exact path='/' element={<Base/>} />
-         <Route path='/Render' element={<Render />} />
+       <Route exact path='/' element={<Content/>}/>
+         <Route path='/Render' element={<Render/>} />
         <Route path='/Addstud' element={<Addstud />} />
           <Route path='/Editstud' element={<Editstud />} />
           <Route path='/content' element={<Content/>}/>

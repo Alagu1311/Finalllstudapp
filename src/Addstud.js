@@ -30,11 +30,7 @@ function Addstud() {
    
     return (
         <div>
-          
-
-      
-        
-      <h3 className='texalcen'>Add-student</h3>
+         <h3 className='texalcen'>Add-student</h3>
           <form className='inputgrp'>
               <input type='text' placeholder='Enter ID' className='inmar' value={id} onChange={(e)=>setid(e.target.value)}></input>Id<br></br>
               <input type='text' placeholder='Enter Name' className='inmar' value={Name} onChange={(e)=>setName(e.target.value)}></input>Name<br></br>
