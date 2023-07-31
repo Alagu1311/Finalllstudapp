@@ -13,7 +13,7 @@ function Render() {
   return (
       <div>
        
-             
+             <h2 className='texalcen'>Students Info</h2>
               <div className='flex'>
               {stud.map((arr) => (
                 

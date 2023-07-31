@@ -33,8 +33,15 @@ function Editstud() {
       Cgpa
     }
     stud[finalres] = obj;
-    setstud([...stud,obj])
-}
+    setstud([...stud, obj])
+    
+     setid("")
+      setName("")
+      setDep("")
+      setSem("")
+       setCgpa("")
+  }
+  
   return (
 
     <div>
@@ -43,8 +50,8 @@ function Editstud() {
        <Render/>
       
 
+          <div className='inputgrp'>
           
-           <form className='inputgrp'>
               <input type='text' placeholder='Enter ID' className='inmar' value={id} onChange={(e)=>setid(e.target.value)}></input>Id<br></br>
               <input type='text' placeholder='Enter Name' className='inmar' value={Name} onChange={(e)=>setName(e.target.value)}></input>Name<br></br>
               <input type='text' placeholder='Enter Deapartment' className='inmar' value={Dep} onChange={(e)=>setDep(e.target.value)}></input >Enter Department<br></br>
@@ -53,7 +60,8 @@ function Editstud() {
               <div>
                   <button className='addbtn'onClick={editstudent}>Editstudent</button>
               </div>
-      </form>
+     
+        </div>
      
           
     </div>

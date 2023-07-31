@@ -19,6 +19,7 @@ function Addstud() {
             Cgpa
            
         }
+        console.log(obj)
         setstud([...stud,obj])
         
         setid("")
@@ -30,8 +31,9 @@ function Addstud() {
    
     return (
         <div>
-         <h3 className='texalcen'>Add-student</h3>
-          <form className='inputgrp'>
+            <h3 className='texalcen'>Add-student</h3>
+            <div className='inputgrp'>
+          {/* <form className='inputgrp'> */}
               <input type='text' placeholder='Enter ID' className='inmar' value={id} onChange={(e)=>setid(e.target.value)}></input>Id<br></br>
               <input type='text' placeholder='Enter Name' className='inmar' value={Name} onChange={(e)=>setName(e.target.value)}></input>Name<br></br>
               <input type='text' placeholder='Enter Deapartment' className='inmar' value={Dep} onChange={(e)=>setDep(e.target.value)}></input >Enter Department<br></br>
@@ -41,7 +43,8 @@ function Addstud() {
                   <button className='addbtn'onClick={Handleaddstud}>Addstudent</button>
                 </div>
                 
-            </form>
+                {/* </form> */}
+                </div>
             <Render/>
           
           </div>
