@@ -6,8 +6,8 @@ import { Routes, Route } from 'react-router-dom';
 import Render from './Render';
 import Addstud from './Addstud';
 import Editstud from './Editstud';
-import Base from './Base';
 import Content from './Content';
+import Base from './Base';
 
 
 export const studcontxt=createContext(null)
@@ -17,10 +17,11 @@ function App() {
   
   return (
     <div className="App">
-    <Base/>
+   
       <studcontxt.Provider
         value={{stud,setstud,studid,setstudid}}
       >
+        <Base/>
       <Routes>
        <Route exact path='/' element={<Content/>}/>
          <Route path='/Render' element={<Render/>} />
